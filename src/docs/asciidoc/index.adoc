@@ -1,0 +1,39 @@
+= Walsupring API Document
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 3
+:sectlinks:
+
+[[join]]
+== 회원가입 API
+=== Request
+CURL:
+include::{snippets}/user/create/curl-request.adoc[]
+
+RequestBody:
+include::{snippets}/user/create/request-body.adoc[]
+
+Request HTTP Example:
+include::{snippets}/user/create/http-request.adoc[]
+
+=== Response
+ResponseBody:
+include::{snippets}/user/create/response-body.adoc[]
+
+[[getOneUser]]
+== 회원 단건 조회 API
+=== Request
+CURL:
+include::{snippets}/user/get-one/curl-request.adoc[]
+
+RequestBody:
+include::{snippets}/user/get-one/request-body.adoc[]
+
+Request HTTP Example:
+include::{snippets}/user/get-one/http-request.adoc[]
+
+=== Response
+ResponseBody:
+include::{snippets}/user/get-one/response-body.adoc[]

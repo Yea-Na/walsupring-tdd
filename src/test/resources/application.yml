@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://dev-maple-boss.cdoajuouy1xs.ap-northeast-2.rds.amazonaws.com:3306/walsupringtest
+    username: yena
+    password: 1234
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect #mysql? ??? ?? ?? ????
+        format_sql: true
+    show-sql: true
