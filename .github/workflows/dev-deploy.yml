@@ -54,6 +54,9 @@ jobs:
           java-version: '17'
           cache: 'gradle'
 
+      - name: Run chmod to make gradlew executable
+        run: chmod +x ./gradlew
+
       # gradle test 실행
       - name: Integration Test
         uses: gradle/gradle-build-action@main
