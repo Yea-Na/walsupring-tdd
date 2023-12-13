@@ -5,9 +5,6 @@ import com.walsupring.admin.domain.Admin;
 import com.walsupring.admin.domain.AdminRepository;
 import com.walsupring.controller.dto.admin.AdminChangePasswordDto;
 import com.walsupring.controller.dto.admin.AdminJoinDto;
-import com.walsupring.controller.dto.user.UserChangePasswordDto;
-import com.walsupring.user.domain.User;
-import com.walsupring.user.domain.UserStatus;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +18,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
