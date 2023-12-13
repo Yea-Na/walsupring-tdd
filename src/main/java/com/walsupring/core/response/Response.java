@@ -10,6 +10,9 @@ public class Response {
     public static ApiResult<?> created() {
         return ApiResult.of(ErrorCode.SUCCESS);
     }
+    public static <T> ApiResult<T> created(T data) {
+        return ApiResult.of(ErrorCode.SUCCESS,data);
+    }
     public  static <T> ApiResult<T> ok(T data) {
         return ApiResult.of(ErrorCode.SUCCESS,data);
     }

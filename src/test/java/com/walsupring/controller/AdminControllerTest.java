@@ -52,7 +52,7 @@ class AdminControllerTest {
                 .andDo(MockMvcResultHandlers.print())
                 .andExpectAll(jsonPath("$.code").value("S000"),
                         jsonPath("$.message").value("success"),
-                        jsonPath("$.data.id").value(1),
+                        jsonPath("$.data.id").value(admin.getId()),
                         jsonPath("$.data.loginId").value("loginId"),
                         jsonPath("$.data.name").value("name"),
                         jsonPath("$.data.createdAt").isNotEmpty()

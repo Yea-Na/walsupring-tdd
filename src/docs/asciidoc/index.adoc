@@ -37,3 +37,51 @@ include::{snippets}/user/get-one/http-request.adoc[]
 === Response
 ResponseBody:
 include::{snippets}/user/get-one/response-body.adoc[]
+
+[[getListUser]]
+== 회원 리스트 조회 API
+=== Request
+CURL:
+include::{snippets}/user/get-list/curl-request.adoc[]
+
+RequestBody:
+include::{snippets}/user/get-list/request-body.adoc[]
+
+Request HTTP Example:
+include::{snippets}/user/get-list/http-request.adoc[]
+
+=== Response
+ResponseBody:
+include::{snippets}/user/get-list/response-body.adoc[]
+
+[[nickNameChangeUser]]
+== 닉네임 변경 API
+=== Request
+CURL:
+include::{snippets}/user/nickName-change/curl-request.adoc[]
+
+RequestBody:
+include::{snippets}/user/nickName-change/request-body.adoc[]
+
+Request HTTP Example:
+include::{snippets}/user/nickName-change/http-request.adoc[]
+
+=== Response
+ResponseBody:
+include::{snippets}/user/nickName-change/response-body.adoc[]
+
+[[passwordChangeUser]]
+== 비밀번호 변경 API
+=== Request
+CURL:
+include::{snippets}/user/password-change/curl-request.adoc[]
+
+RequestBody:
+include::{snippets}/user/password-change/request-body.adoc[]
+
+Request HTTP Example:
+include::{snippets}/user/password-change/http-request.adoc[]
+
+=== Response
+ResponseBody:
+include::{snippets}/user/password-change/response-body.adoc[]

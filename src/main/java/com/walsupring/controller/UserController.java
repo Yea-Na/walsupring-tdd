@@ -24,10 +24,11 @@ public class UserController {
 
     @PostMapping
     @ResponseStatus(code = HttpStatus.CREATED)   //status 200이 아니라 201(생성)으로 바꿈
-    public ApiResult<?> join(@RequestBody UserJoinDto.Request request) {
+    public ApiResult<UserJoinDto.Response> join(@RequestBody UserJoinDto.Request request) {
         //회원가입
-        userService.join(request.getLoginId(), request.getPassword(), request.getName(), request.getNickname());
-        return Response.created();
+        User user = userService.join(request.getLoginId(), request.getPassword(), request.getName(), request.getNickname());
+
+        return Response.created(new UserJoinDto.Response(user));
     }
 
 
@@ -86,7 +87,7 @@ public class UserController {
         //유저 닉네임 변경
         User user = userService.changeNickname(id, request.getNickname());
 
-        return Response.changed(new UserChangeNicknameDto.Response(user));
+        return Response.ok(new UserChangeNicknameDto.Response(user));
 
     }
 
@@ -94,6 +95,6 @@ public class UserController {
     public ApiResult<UserChangePasswordDto.Response> changePassword(@PathVariable Long id, @RequestBody UserChangePasswordDto.Request request) {
         //패스워드 변경
         User user = userService.changePassword(id, request.getPassword());
-        return Response.changed(new UserChangePasswordDto.Response(user));
+        return Response.ok(new UserChangePasswordDto.Response(user));
     }
 }
