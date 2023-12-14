@@ -106,4 +106,5 @@ jobs:
               --region=ap-northeast-2
 
           aws elasticbeanstalk update-environment --application-name walsupring \
-              --environment-name walsupring-env --version-label ${{ steps.set-envs.outputs.API_ZIP }}
+              --environment-id e-7ehu4bweua --version-label ${{ steps.set-envs.outputs.API_ZIP }}
+
