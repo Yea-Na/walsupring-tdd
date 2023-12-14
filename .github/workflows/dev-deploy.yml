@@ -96,13 +96,13 @@ jobs:
 
       - name: upload to s3
         run: |
-          aws s3 cp build/distributions/${{ steps.set-envs.outputs.API_ZIP }} s3://elasticbeanstalk-ap-southeast-2-836432947732
+          aws s3 cp build/distributions/${{ steps.set-envs.outputs.API_ZIP }} s3://elasticbeanstalk-ap-northeast-2-836432947732
 
       - name: Api Deploy To Dev Server
         if: steps.set-envs.outputs.PROFILE == 'dev'
         run: |
           aws elasticbeanstalk create-application-version --application-name walsupring \
-              --version-label ${{ steps.set-envs.outputs.API_ZIP }} --source-bundle S3Bucket="elasticbeanstalk-ap-southeast-2-836432947732",S3Key="${{ steps.set-envs.outputs.API_ZIP }}" \
+              --version-label ${{ steps.set-envs.outputs.API_ZIP }} --source-bundle S3Bucket="elasticbeanstalk-ap-northeast-2-836432947732",S3Key="${{ steps.set-envs.outputs.API_ZIP }}" \
               --region=ap-northeast-2
 
           aws elasticbeanstalk update-environment --application-name walsupring \
